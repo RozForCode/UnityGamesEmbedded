@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
             key: 'Content-Encoding',
             value: 'br',
           },
+          {
+            key: 'Content-Type',
+            value: 'application/wasm',
+          }
         ],
       },
     ];
