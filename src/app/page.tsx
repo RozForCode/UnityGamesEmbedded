@@ -37,7 +37,6 @@ export default function Home() {
           allowFullScreen
         ></iframe>
         {/* You can add other elements around your game iframe */}
-        <p>Enjoy playing!</p>
       </main>
     </div>
       </main>
