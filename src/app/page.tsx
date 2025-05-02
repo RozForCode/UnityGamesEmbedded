@@ -50,6 +50,21 @@ export default function Home() {
             🎮 Play Word Scramble
           </button>
         </div>
+        <div className={styles.buttonSection}>
+          <button className={styles.playButton} onClick={() => router.push('/tetris')}>
+            🎮 Play Tetris
+          </button>
+        </div>
+        <div className={styles.buttonSection}>
+          <button className={styles.playButton} onClick={() => router.push('/memoryGame')}>
+            🎮 Play Memory Game
+          </button>
+        </div>
+        <div className={styles.buttonSection}>
+          <button className={styles.playButton} onClick={() => router.push('/maze')}>
+            🎮 Play Maze Game
+          </button>
+        </div>
       </main>
     </div>
       </main>

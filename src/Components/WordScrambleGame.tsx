@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './word-scramble.css';
+import styles from './styles/word-scramble.module.css';
 const words = ['react', 'javascript', 'nextjs', 'python'];
 
 function shuffle(word: string) {
@@ -23,8 +23,8 @@ export default function WordScrambleGame() {
     };
 
     return (
-        <div className="game-container">
-        <h2 className="game-title">Word Scramble</h2>
+        <div className={styles.gameContainer}>
+        <h2 className={styles.gameTitle}>Word Scramble</h2>
         <h3>{scrambledWord}</h3>
         <input value={userInput} onChange={(e) => setUserInput(e.target.value)} />
         <button onClick={checkAnswer}>Submit</button>

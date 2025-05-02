@@ -1,5 +1,5 @@
 /* src/components/WordScrambleGame.css */
-.game-container {
+.gameContainer {
   padding: 20px;
   border: 2px solid #444;
   border-radius: 8px;
@@ -7,7 +7,7 @@
   margin: 0 auto;
 }
 
-.game-title {
+.gameTitle {
   font-size: 24px;
   margin-bottom: 16px;
   text-align: center;

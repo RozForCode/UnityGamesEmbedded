@@ -1,0 +1,47 @@
+.container {
+  padding: 2rem;
+  text-align: center;
+  background: #0f172a;
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #cbd5e1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  justify-content: center;
+  gap: 16px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(145deg, #1e293b, #334155);
+  color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  user-select: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #334155, #1e293b);
+}
