@@ -1,11 +1,15 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import React from 'react';
 import Image from "next/image";
 import Head from 'next/head';
 import styles from "./page.module.css";
+import TakeOver from "@/Components/Take-Over";
+
 
 export default function Home() {
   const router = useRouter();
+  const [showGame, setShowGame] = React.useState(false);
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -17,23 +21,29 @@ export default function Home() {
           height={38}
           priority
         />
-
-        <div className={styles.ctas}>
-          <h2>Play TakeOver!</h2>
-          <p>This Unity WebGL game was created with Unity and embedded here using an iframe.</p>
-
-        </div>
+        
         <div>
       <Head>
         <title>My Awesome Game on Next.js</title>
       </Head>
 
       <main>
-        
         <div className={styles.buttonSection}>
-          <button className={styles.playButton} onClick={() => router.push('/take-over')}>
+      {!showGame && (
+          <button className={styles.playButton} onClick={() => setShowGame(true)}>
             🎮 Play Take Over
           </button>
+        )}
+        {showGame && (
+          <div>
+          <div className={styles.gameContainer}>
+            <TakeOver />
+          </div>
+          <button  className={styles.playButton}  style={{ marginTop: '20px', marginLeft: '300px' }} onClick={() => setShowGame(false)}>
+            Close Take Over
+        </button>
+        </div>
+        )}
         </div>
         <div className={styles.buttonSection}>
           <button className={styles.playButton} onClick={() => router.push('/word-scramble')}>
