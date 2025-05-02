@@ -29,24 +29,15 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Welcome to My Game!</h1>
-        <iframe
-          src="/Take-Over/index.html" // Path to your local game's HTML file
-          width={960} // Adjust as needed
-          height={600} // Adjust as needed
-          style={{ border: 'none', backgroundColor: 'black' }}
-          title="Your Game"
-          allow="autoplay; fullscreen"
-          allowFullScreen
-        ></iframe>
+        
         <div className={styles.buttonSection}>
-          <button className={styles.playButton} onClick={() => router.push('/word-scramble')}>
-            🎮 Play Word Scramble
+          <button className={styles.playButton} onClick={() => router.push('/take-over')}>
+            🎮 Play Take Over
           </button>
         </div>
         <div className={styles.buttonSection}>
-          <button className={styles.playButton} onClick={() => router.push('/phaser-game')}>
-            🎮 Play Phaser Shooter
+          <button className={styles.playButton} onClick={() => router.push('/word-scramble')}>
+            🎮 Play Word Scramble
           </button>
         </div>
       </main>
