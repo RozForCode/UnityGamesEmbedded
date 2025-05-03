@@ -16,7 +16,10 @@ export default function MazePage() {
         while (x < cols - 1 || y < rows - 1) {
             if (x === cols - 1) y++;
             else if (y === rows - 1) x++;
-            else Math.random() > 0.5 ? x++ : y++;
+            // ESLint flags this because ternaries should be used for value-returning expressions — not just logic execution.
+            // else Math.random() > 0.5 ? x++ : y++;
+            else if (Math.random() > 0.5) x++;
+            else y++; 
             maze[y][x] = 0;
         }
         return maze;
