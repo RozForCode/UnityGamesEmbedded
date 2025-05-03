@@ -2,25 +2,25 @@
 import { useState, useEffect } from 'react';
 import styles from './styles/maze.module.css';
 
-const rows = 10;
-const cols = 10;
-
-function generateMaze(): number[][] {
-    const maze = Array.from({ length: rows }, () => Array(cols).fill(1));
-
-    // Simple randomized path generator (not a full maze algorithm)
-    let x = 0, y = 0;
-    maze[y][x] = 0;
-    while (x < cols - 1 || y < rows - 1) {
-        if (x === cols - 1) y++;
-        else if (y === rows - 1) x++;
-        else Math.random() > 0.5 ? x++ : y++;
-        maze[y][x] = 0;
-    }
-    return maze;
-    }
 
 export default function MazePage() {
+    const rows = 10;
+    const cols = 10;
+
+    function generateMaze(): number[][] {
+        const maze = Array.from({ length: rows }, () => Array(cols).fill(1));
+
+        // Simple randomized path generator (not a full maze algorithm)
+        let x = 0, y = 0;
+        maze[y][x] = 0;
+        while (x < cols - 1 || y < rows - 1) {
+            if (x === cols - 1) y++;
+            else if (y === rows - 1) x++;
+            else Math.random() > 0.5 ? x++ : y++;
+            maze[y][x] = 0;
+        }
+        return maze;
+        }
     const [maze, setMaze] = useState<number[][]>([]);
     const [playerPos, setPlayerPos] = useState<[number, number]>([0, 0]);
 
