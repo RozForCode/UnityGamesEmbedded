@@ -34,3 +34,10 @@ export default function MemoryGamePage() {
         </div>
     );
 }
+
+// add functionality like 
+/*
+score 
+deciding memorizing time
+no.of cards or no.of rows and columns
+*/

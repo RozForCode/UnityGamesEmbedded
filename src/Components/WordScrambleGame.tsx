@@ -34,3 +34,8 @@ export default function WordScrambleGame() {
         </div>
     );
 }
+
+
+// increase vocabulary 
+// lets your control level of difficulty
+// improve UI

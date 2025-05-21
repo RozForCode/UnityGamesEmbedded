@@ -66,3 +66,6 @@ export default function MazePage() {
         </div>
     );
 }
+
+// understand this code
+// watch youtube video about maze generation

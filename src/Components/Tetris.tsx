@@ -35,3 +35,4 @@ export default function Tetris() {
         </div>
     );
 }
+// make it functional
